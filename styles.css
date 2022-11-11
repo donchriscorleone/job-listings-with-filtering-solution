@@ -164,3 +164,125 @@ img {
     flex-wrap: wrap;
 }
 
+/* Job container */
+/* On Mobile */
+
+.job-container {
+    --max-width: 350px;
+    padding: 1.5rem;
+    padding-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+    margin-top: 3rem;
+}
+
+.job-container[data-type=featured]:after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 100%;
+    background-color: var(--clr-primary-400);
+    display: block;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.job-container .company-image {
+    width: 60px;
+    height: 60px;
+}
+
+.card-header > *:not(:first-child) {
+    margin-left: .35rem;
+}   
+
+.card-header .company {
+    font-weight: 700;
+    color: var(--clr-primary-400);
+    margin-right: 1.4rem;
+}
+
+
+.job-title {
+    font-size: var(--fs-400);
+    color: var(--clr-neutral-800);
+}
+
+.card-footer .list {
+    list-style: none;
+}
+
+.card-footer .list li {
+    display: inline-block;
+    color: var(--clr-neutral-400);
+    font-size: var(--fs-400);
+}
+
+
+.card-footer .list > *:not(:first-child) {
+    margin-left: 2rem;
+    position: relative;
+}
+
+.card-footer .list > *:not(:first-child):before {
+    content: '.';
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-500);
+    position: absolute;
+    top: -6.5px;
+    left: calc( -2rem / 2);
+}
+
+@media screen and (max-width: 50em) {
+    .job-container::before {
+        content: '';
+        position: absolute;
+        width: calc(100% - 1.5rem - 1.5rem);
+        height: 1px;
+        background-color: var(--clr-neutral-400);
+        left: 0;
+        right: 0;
+        top: calc(50% + calc(1.5rem / 2));
+        margin-inline: auto;
+    }
+
+    .job-container .company-image {
+        position: absolute;
+        top: -1.5rem;
+    }
+
+    .job-card {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 50em) {
+    .job-container {
+        --max-width: 850px;
+        padding: 1.75rem 2.25rem;
+        flex-direction: initial;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    .job-container .company-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .job-card {
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    .filters {
+        margin-left: auto;
+    }
+}
