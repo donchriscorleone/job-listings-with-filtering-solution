@@ -34,6 +34,10 @@ body {
     font-family: var(--ff-league);
 }
 
+img {
+    width: 100%;
+}
+
 /* Reusable classes */
 
 .grid { display: grid;}
@@ -116,4 +120,25 @@ body {
 .btn[data-type=normal]:hover,
 .btn[data-type=normal]:focus-within {
     color: var(--clr-primary-400);
+}
+
+/* Filter */
+
+.filter {
+    display: flex;
+    align-items: center;
+    background-color: var(--clr-primary-600);
+}
+
+.filter-text {
+    color: var(--clr-primary-400);
+    display: inline-block;
+    height: 100%;
+    padding-inline: .5rem;
+    font-weight: var(--fw-bold);
+}
+
+.filter .btn[data-type="icon"] {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
