@@ -1,5 +1,7 @@
 :root {
     --clr-primary-400: hsl(180, 29%, 50%);
+    --clr-primary-500: hsl(180deg 31% 50%);
+    --clr-primary-600: hsl(180deg 36% 95%);
 
     --clr-neutral-200: hsl(180, 52%, 96%);
     --clr-neutral-300: hsl(180, 31%, 95%);
@@ -19,4 +21,99 @@
     --fs-900: 3.35rem;
 
     --fs-body: var(--fs-400);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+body {
+    font-family: var(--ff-league);
+}
+
+/* Reusable classes */
+
+.grid { display: grid;}
+.flex { display: flex;}
+.even-columns {grid-template-columns: 1fr 1fr;}
+.container {
+    max-width: var(--max-width, 50em);
+    padding: var(--padding-block, 0) var(--padding-inline, 0);
+}
+
+/* Components */
+
+/* Pills */
+
+.pill {
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 100vmax;
+    padding: .55rem .5rem;
+    font-size: var(--fs-300);
+    color: var(--clr-neutral-200);
+}
+
+.pill[data-color=primary] {
+    background-color: var(--clr-primary-500);
+}
+
+.pill[data-color=neutral] {
+    background-color: var(--clr-neutral-800);
+}
+
+/* Buttons */
+.btn {
+    border: 0;
+    padding: .65rem .5rem;
+    border-radius: 5px;
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus-within {
+    transition: color .35s, background-color .35s;
+}
+
+.btn[data-color=primary] {
+    background-color: var(--clr-primary-600);
+    color: var(--clr-primary-400);
+}
+
+.btn[data-color=primary]:hover,
+.btn[data-color=primary]:focus-within {
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-200);
+}
+
+.btn[data-type="icon"] {
+    background-image: url(./images/icon-remove.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--clr-primary-400);
+    width: 30px;
+    height: 30px;
+    /* TODO: change width and height */
+    /* width: 100%; */
+    /* height: 100%; */
+}
+
+.btn[data-type="icon"]:hover,
+.btn[data-type="icon"]:focus-within {
+    background-color: var(--clr-neutral-800);
+}
+
+.btn[data-type=normal] {
+    background-color: transparent;
+    text-decoration: underline;
+    color: var(--clr-neutral-400);
+}
+
+.btn[data-type=normal]:hover,
+.btn[data-type=normal]:focus-within {
+    color: var(--clr-primary-400);
 }
