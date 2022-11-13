@@ -208,6 +208,10 @@ img {
     height: 60px;
 }
 
+.job-container .filters {
+    position: relative;
+}
+
 .card-header > *:not(:first-child) {
     margin-left: .35rem;
 }   
@@ -258,15 +262,15 @@ img {
 }
 
 @media screen and (max-width: 50em) {
-    .job-container::before {
+    .job-container .filters::before {
         content: '';
         position: absolute;
-        width: calc(100% - 1.5rem - 1.5rem);
+        width: 100%;
         height: 1px;
         background-color: var(--clr-neutral-400);
         left: 0;
         right: 0;
-        top: calc(50% + calc(4.5rem / 2));
+        top: calc(-2.5rem / 2);
         margin-inline: auto;
     }
 
