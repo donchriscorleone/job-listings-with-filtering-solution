@@ -52,3 +52,16 @@ Users should be able to:
 ### What I learned
 
 I learned about DOM nodes and how to manipulate them. Working with DOM nodes makes you appreciate frameworks such as React or Angular.
+## Authors
+
+- [@donchriscorleone](https://www.github.com/donchriscorleone)
+
+
+## 🔗 Links
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/christopher-ii-lajom-031959211/)
+
+[![instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/devchristopherii)
+
+[![twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://www.twitter.com/topheriidev)
+
+[![medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@christopherii_)
