@@ -9,7 +9,7 @@ let currentFilters = [];
 window.addEventListener('load', (e) => {
     filterContainer.classList.add('display-none');
 
-    fetch('data.json')
+    fetch('/data.json')
         .then(x => x.json())
         .then(res => {
             jobs = res;
