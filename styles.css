@@ -317,7 +317,7 @@ header {
 }
 
 header .filter-container {
-    transform: translateY(170px);
+    transform: translateY(165px);
 }
 
 @media screen and (min-width: 50em) {
