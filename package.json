@@ -1,0 +1,25 @@
+{
+  "name": "static-job-listings-master",
+  "version": "1.0.0",
+  "description": "This is a solution to the [Job listings with filtering challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+  "dependencies": {},
+  "devDependencies": {
+    "parcel": "^2.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node_modules/.bin/parcel build index.html",
+    "build:prod": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donchriscorleone/job-listings-with-filtering-solution.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donchriscorleone/job-listings-with-filtering-solution/issues"
+  },
+  "homepage": "https://github.com/donchriscorleone/job-listings-with-filtering-solution#readme"
+}
