@@ -39,6 +39,14 @@ img {
     width: 100%;
 }
 
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 /* Reusable classes */
 
 .grid { display: grid;}
@@ -341,4 +349,25 @@ header .filter-container {
 
 #main > *:not(:first-child) {
     margin-top: 3rem;
+}
+
+footer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+}
+
+footer ul li a {
+    color: var(--clr-neutral-800);
+    font-weight: var(--fw-bold);
+}
+
+footer ul li a:hover {
+    color: var(--clr-primary-600);
+    transition: color .35s;
+}
+
+footer ul > *:not(:first-child) {
+    margin-top: .5rem;
 }
