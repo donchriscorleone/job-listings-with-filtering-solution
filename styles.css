@@ -341,6 +341,7 @@ header .filter-container {
 #main {
     height: 100%;
     padding: 3rem;
+    background-color: hsl(186deg 56% 96%);
 }
 
 #main.active {
