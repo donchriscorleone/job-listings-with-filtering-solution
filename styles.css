@@ -3,6 +3,7 @@
     --clr-primary-500: hsl(180deg 31% 50%);
     --clr-primary-600: hsl(180deg 36% 95%);
 
+    --clr-neutral-100: hsl(0, 0%, 100%);
     --clr-neutral-200: hsl(180, 52%, 96%);
     --clr-neutral-300: hsl(180, 31%, 95%);
     --clr-neutral-400: hsl(180, 8%, 52%);
@@ -47,6 +48,9 @@ img {
     max-width: var(--max-width, 50em);
     padding: var(--padding-block, 0) var(--padding-inline, 0);
     margin-inline: auto;
+}
+.display-none {
+    display: none !important;
 }
 
 /* Components */
@@ -148,13 +152,14 @@ img {
 /* Filters */
 
 .filter-container {
-    --max-width: 50em;
+    --max-width: 350px;
     padding: 1rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 7px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+    background-color: var(--clr-neutral-100);
 }
 
 .filters {
@@ -162,6 +167,12 @@ img {
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
+}
+
+@media screen and (min-width: 50em) {
+    .filter-container {
+        --max-width: 850px;
+    }
 }
 
 /* Job container */
@@ -177,7 +188,6 @@ img {
     position: relative;
     border-radius: 5px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
-    margin-top: 3rem;
 }
 
 .job-container[data-type=featured]:after {
@@ -212,6 +222,14 @@ img {
 .job-title {
     font-size: var(--fs-400);
     color: var(--clr-neutral-800);
+    text-decoration: none;
+    font-weight: var(--fw-bold);
+}
+
+.job-title:hover,
+.job-title:focus-within {
+    color: var(--clr-primary-400);
+    transition: color .35s;
 }
 
 .card-footer .list {
@@ -248,7 +266,7 @@ img {
         background-color: var(--clr-neutral-400);
         left: 0;
         right: 0;
-        top: calc(50% + calc(1.5rem / 2));
+        top: calc(50% + calc(4.5rem / 2));
         margin-inline: auto;
     }
 
@@ -277,12 +295,46 @@ img {
         height: 80px;
     }
 
+    .job-container .filters {
+        margin-left: auto;
+    }
+
     .job-card {
         flex-direction: column;
         gap: .5rem;
     }
+}
 
-    .filters {
-        margin-left: auto;
+/* Header */
+
+header {
+    background-image: url(./images/bg-header-mobile.svg);
+    background-color: var(--clr-primary-400);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+}
+
+header .filter-container {
+    transform: translateY(170px);
+}
+
+@media screen and (min-width: 50em) {
+    header {
+        background-image: url(./images/bg-header-desktop.svg);
     }
+}
+
+#main {
+    height: 100%;
+    padding: 3rem;
+}
+
+#main.active {
+    padding-top: 6rem;
+}
+
+#main > *:not(:first-child) {
+    margin-top: 3rem;
 }
